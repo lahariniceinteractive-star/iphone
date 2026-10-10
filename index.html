@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone 18 Pro — Beyond Titanium | Zero-Gravity Concept</title>
+  
+  <!-- SEO & Social Open Graph Meta -->
+  <meta name="description" content="Explore the futuristic iPhone 18 Pro concept with real-time 3D floating animation, Grade 5 Titanium chassis, 200MP Quad-Prism Camera, and 3D exploded internal architecture.">
+  <meta property="og:title" content="iPhone 18 Pro — Beyond Titanium">
+  <meta property="og:description" content="Experience the dark futuristic 3D showcase of iPhone 18 Pro with smooth scroll rotation, cinematic lighting, and interactive exploded view.">
+  <meta property="og:type" content="website">
+
+  <!-- Space Grotesk Google Font & Fallbacks -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/space-grotesk.css">
+
+  <!-- Core Futuristic Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Cosmic Ambient Backdrop & Grid -->
+  <div id="spaceBackdrop" class="space-backdrop"></div>
+  <div class="cosmic-grid-overlay"></div>
+
+  <!-- Fullscreen 3D WebGL Canvas Layer -->
+  <div id="canvas-container">
+    <canvas id="webgl-canvas"></canvas>
+  </div>
+
+  <!-- Floating HUD Status Badge -->
+  <div class="floating-hud">
+    <div class="hud-pill">
+      <div class="hud-dot"></div>
+      <span id="hudMode">MODE: ZERO-G FLIGHT</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Global Navigation Header Bar
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-left">
+      <a href="#overview" class="brand-badge" title="iPhone 18 Pro Concept">
+        <svg class="apple-icon" viewBox="0 0 170 170" aria-label="Apple Logo">
+          <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.77-11.64-14.19-5.78-9.15-10.28-19.46-13.5-30.93-3.23-11.47-4.84-22.38-4.84-32.74 0-14.68 3.82-26.69 11.47-36.03 7.64-9.33 17.06-14.07 28.25-14.21 4.71 0 10.02 1.37 15.93 4.1 5.92 2.74 9.61 4.18 11.07 4.34 2.03-.31 5.86-1.81 11.51-4.5 5.64-2.69 10.7-3.95 15.17-3.8 11.06.68 20.19 4.88 27.38 12.61-9.92 6.02-14.79 14.36-14.61 25.02.2 8.44 3.4 15.64 9.6 21.6 6.2 5.96 13.52 9.53 21.96 10.72-2.31 6.94-5.25 14.37-8.83 22.28zM119.22 31.85c0-7.23 2.62-13.88 7.86-19.95 5.25-6.07 11.75-9.84 19.51-11.31.22 1.25.33 2.37.33 3.37 0 7.35-2.73 14.2-8.2 20.54-5.46 6.34-12.08 10.05-19.86 11.13-.11-1.22-.17-2.34-.17-3.38z"/>
+        </svg>
+        <span class="brand-title">iPhone 18 Pro</span>
+        <span class="concept-pill">2026 REVEAL</span>
+      </a>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#overview" class="nav-link active">Overview</a></li>
+        <li><a href="#titanium" class="nav-link">Titanium</a></li>
+        <li><a href="#camera" class="nav-link">Camera</a></li>
+        <li><a href="#display" class="nav-link">Display</a></li>
+        <li><a href="#controls" class="nav-link">Haptics</a></li>
+        <li><a href="#architecture" class="nav-link">3D Exploded</a></li>
+        <li><a href="#studio" class="nav-link">3D Studio</a></li>
+        <li><a href="#specs" class="nav-link">Tech Specs</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <!-- Sound FX Synthesizer Toggle -->
+      <button id="btnSoundToggle" class="btn-icon" title="Toggle Sci-Fi Audio FX" aria-label="Toggle Audio">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+      </button>
+
+      <a href="#reserve" class="btn-primary">Pre-Order Now</a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Main Scroll Content
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- Section 0: Hero 3D Showcase Banner -->
+    <section id="overview" class="section hero-section">
+      <div class="container hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Apple Concept Labs // Keynote Reveal
+        </div>
+        <h1 class="title-giant">iPhone 18 Pro</h1>
+        <p class="subtitle-hero">
+          Beyond Titanium. The world’s first zero-gravity mobile architecture engineered with photonic neural optics and 2nm quantum silicon.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#architecture" class="btn-primary">Explore 3D Exploded View</a>
+          <a href="#studio" class="btn-secondary">Interactive 3D Studio</a>
+        </div>
+
+        <!-- Key Metrics Bar -->
+        <div class="hero-specs-bar">
+          <div class="spec-tile">
+            <div class="spec-tile-value text-gradient">A19 Pro</div>
+            <div class="spec-tile-label">2nm Quantum Neural SoC</div>
+          </div>
+          <div class="spec-tile">
+            <div class="spec-tile-value">200 MP</div>
+            <div class="spec-tile-label">Quad-Prism Photonic Array</div>
+          </div>
+          <div class="spec-tile">
+            <div class="spec-tile-value">240 Hz</div>
+            <div class="spec-tile-label">ProMotion XDR 2.0 (3,500 Nits)</div>
+          </div>
+          <div class="spec-tile">
+            <div class="spec-tile-value">Grade 5</div>
+            <div class="spec-tile-label">Zero-G Titanium Chassis</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mouse Scroll Indicator -->
+      <a href="#titanium" class="scroll-indicator" aria-label="Scroll down to explore">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Scroll To Rotate 3D</span>
+      </a>
+    </section>
+
+    <!-- Section 1: Grade 5 Titanium Uni-Chassis -->
+    <section id="titanium" class="section">
+      <div class="container two-column-layout">
+        <div class="content-left glass-panel interactive-layer">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Aerospace Structural Engineering
+          </div>
+          <h2 class="title-large">Grade 5 Titanium.<br><span class="text-gradient">Atomically bonded.</span></h2>
+          <p class="body-large">
+            Crafted from hyper-refined Grade 5 Titanium alloy with micro-arc oxidation finish. The unibody framework achieves unprecedented strength-to-weight equilibrium, feeling virtually weightless in hand while withstanding extreme kinetic stress.
+          </p>
+
+          <div class="feature-cards-grid">
+            <div class="feature-mini-card">
+              <div class="mini-card-icon">⚡</div>
+              <div class="mini-card-title">42% Lighter</div>
+              <div class="mini-card-desc">Advanced lattice core eliminates excess mass without compromising structural rigidity.</div>
+            </div>
+            <div class="feature-mini-card">
+              <div class="mini-card-icon">🛡️</div>
+              <div class="mini-card-title">Micro-Arc Ceramic</div>
+              <div class="mini-card-desc">Molecular plasma oxidation provides scratch resistance surpassing sapphire.</div>
+            </div>
+            <div class="feature-mini-card">
+              <div class="mini-card-icon">✨</div>
+              <div class="mini-card-title">Comfort Contours</div>
+              <div class="mini-card-desc">0.8mm chamfered radius guarantees seamless palm ergonomical balance.</div>
+            </div>
+            <div class="feature-mini-card">
+              <div class="mini-card-icon">♻️</div>
+              <div class="mini-card-title">100% Recycled</div>
+              <div class="mini-card-desc">Zero virgin ore extraction, forged with renewable geothermal energy.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <!-- 3D Phone is visible in background showcasing frame side profile -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Quantum Quad-Prism Camera System -->
+    <section id="camera" class="section">
+      <div class="container two-column-layout">
+        <div class="content-left">
+          <!-- 3D Phone is visible in background showing back camera array close-up -->
+        </div>
+
+        <div class="content-right glass-panel interactive-layer">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Computational Photonic Engine
+          </div>
+          <h2 class="title-large">Quantum Camera.<br><span class="text-gradient">200MP Quad-Prism Array.</span></h2>
+          <p class="body-large">
+            A breakthrough quadruple sapphire optical matrix. Features a 200MP Main Wide Fusion sensor with 2nd-gen Sensor-Shift OIS, paired with a Tetraprism Periscope delivering 10x optical and 100x computational zoom.
+          </p>
+
+          <!-- Interactive Focal Length Switcher -->
+          <div class="camera-lens-matrix">
+            <div class="lens-card" data-focal="13mm" onclick="setFocalLength('13mm')">
+              <div class="lens-mm">13mm</div>
+              <div class="lens-label">Ultra-Wide 0.5x</div>
+              <div class="lens-aperture">f/2.2</div>
+            </div>
+            <div class="lens-card active" data-focal="24mm" onclick="setFocalLength('24mm')">
+              <div class="lens-mm">24mm</div>
+              <div class="lens-label">Main Wide 1x</div>
+              <div class="lens-aperture">f/1.6</div>
+            </div>
+            <div class="lens-card" data-focal="120mm" onclick="setFocalLength('120mm')">
+              <div class="lens-mm">120mm</div>
+              <div class="lens-label">Tetraprism 5x</div>
+              <div class="lens-aperture">f/2.8</div>
+            </div>
+            <div class="lens-card" data-focal="240mm" onclick="setFocalLength('240mm')">
+              <div class="lens-mm">240mm</div>
+              <div class="lens-label">Periscope 10x</div>
+              <div class="lens-aperture">f/3.2</div>
+            </div>
+          </div>
+
+          <!-- Interactive Viewfinder Simulation HUD -->
+          <div class="viewfinder-hud">
+            <div class="rec-badge">
+              <div class="rec-dot"></div>
+              <span>8K 120FPS PRORES LOG</span>
+            </div>
+            <div class="viewfinder-stats">
+              <span>ZOOM: <b id="vfZoom">24mm</b></span>
+              <span>IRIS: <b id="vfAperture">f/1.6</b></span>
+              <span>SHUTTER: <b id="vfShutter">1/1600s</b></span>
+              <span>ISO: <b id="vfIso">50</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: ProMotion XDR 2.0 Display & Dynamic Island Pro -->
+    <section id="display" class="section">
+      <div class="container two-column-layout">
+        <div class="content-left glass-panel interactive-layer">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Photonic Visuals
+          </div>
+          <h2 class="title-large">ProMotion XDR 2.0.<br><span class="text-gradient">3,500 Nits Outdoor Peak.</span></h2>
+          <p class="body-large">
+            A borderless 6.3" or 6.9" Super Retina XDR OLED panel engineered with Micro-LED quantum phosphors. Dynamically scales between 1Hz and 240Hz for hyper-fluid responsiveness and unprecedented power efficiency.
+          </p>
+
+          <!-- Interactive Screen Theme Switcher (Updates 3D Screen live!) -->
+          <div class="step-label">Select 3D Display Mode:</div>
+          <div class="display-theme-picker">
+            <button class="theme-btn active" data-theme="chromatic" onclick="setScreenTheme('chromatic')">
+              <span class="theme-dot" style="background: #00f5ff;"></span>
+              Chromatic Flow
+            </button>
+            <button class="theme-btn" data-theme="hologram" onclick="setScreenTheme('hologram')">
+              <span class="theme-dot" style="background: #38bdf8;"></span>
+              Quantum Hologram
+            </button>
+            <button class="theme-btn" data-theme="nebula" onclick="setScreenTheme('nebula')">
+              <span class="theme-dot" style="background: #a855f7;"></span>
+              Cosmic Nebula
+            </button>
+            <button class="theme-btn" data-theme="stealth" onclick="setScreenTheme('stealth')">
+              <span class="theme-dot" style="background: #64748b;"></span>
+              Obsidian Stealth
+            </button>
+          </div>
+
+          <div class="feature-cards-grid" style="margin-top: 24px;">
+            <div class="feature-mini-card">
+              <div class="mini-card-title">Dynamic Island Pro</div>
+              <div class="mini-card-desc">Simultaneous multi-app widgets, quantum biometric Face ID, and real-time audio waveforms.</div>
+            </div>
+            <div class="feature-mini-card">
+              <div class="mini-card-title">Ceramic Shield 3.0</div>
+              <div class="mini-card-desc">Nano-crystalline sapphire lattice provides 5x superior drop toughness.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <!-- 3D Phone is visible in background directly facing user with dynamic screen -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Solid-State Capacitive Buttons & Action Control -->
+    <section id="controls" class="section">
+      <div class="container two-column-layout">
+        <div class="content-left">
+          <!-- 3D Phone shows edge profile with capacitive buttons -->
+        </div>
+
+        <div class="content-right glass-panel interactive-layer">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Kinetic Touch Interface
+          </div>
+          <h2 class="title-large">Solid-State Architecture.<br><span class="text-gradient">Zero Mechanical Openings.</span></h2>
+          <p class="body-large">
+            Mechanical buttons are history. Precision force transducers and localized linear resonant actuators simulate physical travel with sub-millisecond tactile haptics. Complete IP69K hermetic water and dust seal.
+          </p>
+
+          <!-- Interactive Haptic Button Demonstrator -->
+          <div class="button-demo-grid">
+            <div class="button-interactive-card" title="Click to test haptic feedback">
+              <div class="btn-card-left">
+                <div class="btn-badge-icon">📸</div>
+                <div>
+                  <div class="mini-card-title">Camera Capture Slider</div>
+                  <div class="mini-card-desc">Two-stage shutter press with continuous swipe gesture for instant focal zoom.</div>
+                </div>
+              </div>
+              <div class="haptic-trigger-text">TEST TAP ↗</div>
+            </div>
+
+            <div class="button-interactive-card" title="Click to test Action Button">
+              <div class="btn-card-left">
+                <div class="btn-badge-icon">⚡</div>
+                <div>
+                  <div class="mini-card-title">Multifunction Action Button</div>
+                  <div class="mini-card-desc">Customizable shortcuts: Siri AI companion, flashlight, translation, focus modes.</div>
+                </div>
+              </div>
+              <div class="haptic-trigger-text">TEST TAP ↗</div>
+            </div>
+
+            <div class="button-interactive-card" title="Click to test Solid-State Volume">
+              <div class="btn-card-left">
+                <div class="btn-badge-icon">🔊</div>
+                <div>
+                  <div class="mini-card-title">Solid-State Capacitive Volume</div>
+                  <div class="mini-card-desc">Pressure-calibrated edge strips for clickless volume manipulation.</div>
+                </div>
+              </div>
+              <div class="haptic-trigger-text">TEST TAP ↗</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Cinematic Stills & Keynote Renders -->
+    <section id="gallery" class="section gallery-section">
+      <div class="container interactive-layer">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Keynote Vision // 2026</div>
+          <h2 class="title-large">Cinematic Stills & Zero-G Concepts.</h2>
+          <p class="body-large">A glimpse into the physics-defying industrial design language of the next decade.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="futuristic_iphone_antigravity_ad.jpg" alt="Zero-Gravity Levitation Field" class="gallery-card-img">
+            <div class="gallery-card-overlay">
+              <div class="gallery-card-tag">CONCEPT ARCHIVE // 01</div>
+              <div class="gallery-card-title">Zero-G Levitation Field</div>
+              <div class="gallery-card-desc">Diamagnetic stabilization rings creating harmonious equilibrium in space.</div>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="futuristic_iphone_antigravity_concept_alt.jpg" alt="Quantum Crystal Dynamics" class="gallery-card-img">
+            <div class="gallery-card-overlay">
+              <div class="gallery-card-tag">CONCEPT ARCHIVE // 02</div>
+              <div class="gallery-card-title">Quantum Crystal Dynamics</div>
+              <div class="gallery-card-desc">Dynamic Island Pro and dual-surface titanium finish under studio rim lighting.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: 3D Zero-G Exploded Architecture -->
+    <section id="architecture" class="section exploded-section">
+      <div class="container two-column-layout">
+        <div class="content-left glass-panel-heavy interactive-layer">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Internal Architecture Exposed
+          </div>
+          <h2 class="title-large">Zero-G Deconstructed.<br><span class="text-gradient">3D Exploded View.</span></h2>
+          <p class="body-large">
+            Peer inside the precision components that power iPhone 18 Pro. From the 2nm A19 Pro Quantum Bionic processor to the solid-state graphene power cell, every layer is mathematically synchronized in space.
+          </p>
+
+          <div class="exploded-controls-card">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>3D SEPARATION DEPTH</span>
+                <span id="explodeValText" class="text-gradient" style="font-weight: 700;">100%</span>
+              </div>
+              <input type="range" id="explodeRange" class="custom-range" min="0" max="100" value="100">
+            </div>
+
+            <div class="exploded-layers-list">
+              <div class="layer-item active" onclick="applyExplodeOffsets(1.0)">
+                <span><span class="layer-number">01</span> Ceramic Shield Sapphire Front Glass</span>
+                <span class="concept-pill">+2.6 Z</span>
+              </div>
+              <div class="layer-item" onclick="applyExplodeOffsets(0.8)">
+                <span><span class="layer-number">02</span> 240Hz Super Retina XDR OLED Display</span>
+                <span class="concept-pill">+1.8 Z</span>
+              </div>
+              <div class="layer-item" onclick="applyExplodeOffsets(0.6)">
+                <span><span class="layer-number">03</span> A19 Pro Quantum Bionic SoC & Vapor Chamber</span>
+                <span class="concept-pill">+0.8 Z</span>
+              </div>
+              <div class="layer-item" onclick="applyExplodeOffsets(0.4)">
+                <span><span class="layer-number">04</span> Grade 5 Micro-Arc Titanium Uni-Chassis</span>
+                <span class="concept-pill">0.0 Z</span>
+              </div>
+              <div class="layer-item" onclick="applyExplodeOffsets(0.2)">
+                <span><span class="layer-number">05</span> High-Density Graphene Battery Module</span>
+                <span class="concept-pill">-0.6 Z</span>
+              </div>
+              <div class="layer-item" onclick="applyExplodeOffsets(0.0)">
+                <span><span class="layer-number">06</span> Assemble All Components [Reset]</span>
+                <span class="concept-pill">LOCK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-right">
+          <!-- 3D Exploded Layers float in center space -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Interactive 3D Studio & Design Lab -->
+    <section id="studio" class="section studio-section">
+      <div class="container interactive-layer" style="display: flex; justify-content: center; width: 100%;">
+        <div class="studio-dock">
+          <div class="studio-dock-row">
+            <div>
+              <div class="eyebrow" style="margin-bottom: 6px;">3D Design Laboratory</div>
+              <div class="finish-label-display">FINISH: <span id="activeFinishLabel" class="text-gradient">NATURAL TITANIUM</span></div>
+            </div>
+
+            <!-- Titanium Finish Color Swatches -->
+            <div class="swatch-group">
+              <button class="swatch-btn active" data-finish="natural" style="background: #c8c8cd;" onclick="setTitaniumFinish('natural')" title="Natural Titanium"></button>
+              <button class="swatch-btn" data-finish="obsidian" style="background: #18181b;" onclick="setTitaniumFinish('obsidian')" title="Space Obsidian Black"></button>
+              <button class="swatch-btn" data-finish="violet" style="background: #581c87;" onclick="setTitaniumFinish('violet')" title="Cosmic Nebula Violet"></button>
+              <button class="swatch-btn" data-finish="gold" style="background: #eab308;" onclick="setTitaniumFinish('gold')" title="Liquid Amber Gold"></button>
+              <button class="swatch-btn" data-finish="emerald" style="background: #059669;" onclick="setTitaniumFinish('emerald')" title="Quantum Emerald"></button>
+            </div>
+          </div>
+
+          <div class="studio-dock-row">
+            <!-- View Mode Tabs -->
+            <div class="view-mode-tabs">
+              <button class="mode-tab active" data-mode="assembled" onclick="setViewMode('assembled')">Assembled</button>
+              <button class="mode-tab" data-mode="exploded" onclick="setViewMode('exploded')">Exploded View</button>
+              <button class="mode-tab" data-mode="transparent" onclick="setViewMode('transparent')">Sapphire X-Ray</button>
+              <button class="mode-tab" data-mode="wireframe" onclick="setViewMode('wireframe')">Wireframe</button>
+            </div>
+
+            <div>
+              <a href="#reserve" class="btn-primary" style="padding: 7px 18px; font-size: 12px;">Pre-Order Configurator →</a>
+            </div>
+          </div>
+
+          <div class="studio-hint-bar">
+            <span>🖱️ Click & Drag to Orbit 360° • Scroll/Pinch to Zoom • Right Click to Pan</span>
+            <span>REAL-TIME WEBGL PBR SHADER</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Tech Specs Matrix -->
+    <section id="specs" class="section">
+      <div class="container interactive-layer">
+        <div class="glass-panel-heavy">
+          <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Full Technical Matrix</div>
+            <h2 class="title-large">Engineered Without Compromise.</h2>
+            <p class="body-large">Every specification tuned for supreme computational throughput and battery longevity.</p>
+          </div>
+
+          <!-- Specs Category Filter Tabs -->
+          <div class="specs-tabs-header">
+            <button class="specs-tab-btn active" data-category="all">All Specifications</button>
+            <button class="specs-tab-btn" data-category="compute">Compute & Silicon</button>
+            <button class="specs-tab-btn" data-category="optics">Camera Optics</button>
+            <button class="specs-tab-btn" data-category="display">Display & Touch</button>
+            <button class="specs-tab-btn" data-category="power">Power & Battery</button>
+          </div>
+
+          <!-- Specs 3-Column Grid -->
+          <div class="specs-grid-display">
+            <!-- Card 1: Silicon -->
+            <div class="spec-matrix-card" data-category="compute">
+              <div class="spec-category-title">Silicon & AI Engine</div>
+              <div class="spec-row">
+                <span class="spec-param">Processor</span>
+                <span class="spec-detail">A19 Pro Quantum Bionic (2nm Gate-All-Around)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">CPU Architecture</span>
+                <span class="spec-detail">8-Core (2 Ultra Performance + 6 High Efficiency)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">GPU Architecture</span>
+                <span class="spec-detail">8-Core Neural GPU with Hardware Mesh Shading</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Neural Engine</span>
+                <span class="spec-detail">32-Core NPU (65 Trillion Operations/sec)</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Camera -->
+            <div class="spec-matrix-card" data-category="optics">
+              <div class="spec-category-title">Photonic Optics Matrix</div>
+              <div class="spec-row">
+                <span class="spec-param">Main Sensor</span>
+                <span class="spec-detail">200MP Quad-Prism Fusion, 2.44µm Quad Pixel, f/1.6</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Ultra-Wide</span>
+                <span class="spec-detail">48MP 120° FOV, 13mm focal, Macro autofocus</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Periscope Telephoto</span>
+                <span class="spec-detail">48MP 10x Optical (240mm), 3D Sensor-Shift OIS</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Video Recording</span>
+                <span class="spec-detail">8K 120fps ProRes Log, Spatial Audio, Dolby Vision</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Display -->
+            <div class="spec-matrix-card" data-category="display">
+              <div class="spec-category-title">Super Retina XDR 2.0</div>
+              <div class="spec-row">
+                <span class="spec-param">Screen Sizes</span>
+                <span class="spec-detail">6.3-inch (Pro) / 6.9-inch (Pro Max) OLED</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Refresh Rate</span>
+                <span class="spec-detail">ProMotion 1Hz to 240Hz Adaptive Ultra-Smooth</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Brightness</span>
+                <span class="spec-detail">2,000 nits typical, 3,500 nits outdoor peak</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Glass Protection</span>
+                <span class="spec-detail">Sapphire Ceramic Shield 3.0 with Oleophobic AR</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Battery & Power -->
+            <div class="spec-matrix-card" data-category="power">
+              <div class="spec-category-title">Solid-State Power</div>
+              <div class="spec-row">
+                <span class="spec-param">Battery Chemistry</span>
+                <span class="spec-detail">Solid-State Graphene High-Density Cell</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Playback Duration</span>
+                <span class="spec-detail">Up to 48 hours continuous video playback</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Wired Fast Charge</span>
+                <span class="spec-detail">Thunderbolt 5 USB-C (80W, 0 to 80% in 18 min)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Wireless MagSafe</span>
+                <span class="spec-detail">MagSafe 3.0 Qi3 Inductive Fast Charging (50W)</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Connectivity -->
+            <div class="spec-matrix-card" data-category="compute">
+              <div class="spec-category-title">Quantum Connectivity</div>
+              <div class="spec-row">
+                <span class="spec-param">Cellular</span>
+                <span class="spec-detail">6G Ready Dual-Sim with Advanced Beamforming</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Wi-Fi & Bluetooth</span>
+                <span class="spec-detail">Wi-Fi 7 (802.11be), Ultra Wideband 3.0, BT 5.4</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Satellite SOS</span>
+                <span class="spec-detail">Direct-to-Cell Low Earth Orbit Voice & Data</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Biometrics</span>
+                <span class="spec-detail">Under-Display TrueDepth Face ID & Sonic Touch</span>
+              </div>
+            </div>
+
+            <!-- Card 6: Design & Environmental -->
+            <div class="spec-matrix-card" data-category="display">
+              <div class="spec-category-title">Materials & Dimensions</div>
+              <div class="spec-row">
+                <span class="spec-param">Frame Material</span>
+                <span class="spec-detail">Grade 5 Aerospace Micro-Arc Titanium Alloy</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Water & Dust Rating</span>
+                <span class="spec-detail">IP69K Hermetic Rating (up to 8m for 60 min)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Weight</span>
+                <span class="spec-detail">174g (iPhone 18 Pro) / 206g (18 Pro Max)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-param">Carbon Impact</span>
+                <span class="spec-detail">Net Zero Lifecycle Carbon Neutral Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Pre-Order Configurator & Reservation -->
+    <section id="reserve" class="section">
+      <div class="container interactive-layer">
+        <div class="glass-panel-heavy configurator-grid">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-dot"></span> Pre-Order Reservation</div>
+            <h2 class="title-large">Build Your iPhone 18 Pro.</h2>
+            <p class="body-large">Configure your display size, storage capacity, and protection. Receive guaranteed Day-One dispatch priority.</p>
+
+            <!-- Step 1: Model Size -->
+            <div class="config-step">
+              <div class="step-label">Step 1 — Select Model Size</div>
+              <div class="model-size-picker">
+                <div class="config-card config-model-card active" data-model="pro" onclick="selectModel('pro')">
+                  <div class="config-card-title">iPhone 18 Pro</div>
+                  <div class="config-card-sub">6.3-inch Super Retina XDR • From $1,199</div>
+                </div>
+                <div class="config-card config-model-card" data-model="proMax" onclick="selectModel('proMax')">
+                  <div class="config-card-title">iPhone 18 Pro Max</div>
+                  <div class="config-card-sub">6.9-inch Super Retina XDR • From $1,399</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Storage Size -->
+            <div class="config-step">
+              <div class="step-label">Step 2 — Select Internal Storage</div>
+              <div class="storage-picker">
+                <div class="config-card config-storage-card active" data-storage="256GB" onclick="selectStorage('256GB')">
+                  <div class="config-card-title">256GB</div>
+                  <div class="config-card-sub">Included</div>
+                </div>
+                <div class="config-card config-storage-card" data-storage="512GB" onclick="selectStorage('512GB')">
+                  <div class="config-card-title">512GB</div>
+                  <div class="config-card-sub">+$200</div>
+                </div>
+                <div class="config-card config-storage-card" data-storage="1TB" onclick="selectStorage('1TB')">
+                  <div class="config-card-title">1TB</div>
+                  <div class="config-card-sub">+$400</div>
+                </div>
+                <div class="config-card config-storage-card" data-storage="2TB" onclick="selectStorage('2TB')">
+                  <div class="config-card-title">2TB</div>
+                  <div class="config-card-sub">+$600</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: AppleCare+ -->
+            <div class="config-step">
+              <div class="step-label">Step 3 — AppleCare+ Coverage</div>
+              <div class="config-card" id="appleCareToggle" onclick="toggleAppleCare()" style="display: flex; justify-content: space-between; align-items: center; text-align: left;">
+                <div>
+                  <div class="config-card-title">AppleCare+ with Theft and Loss</div>
+                  <div class="config-card-sub">Unlimited accidental damage repairs and 24/7 priority technical support.</div>
+                </div>
+                <div class="concept-pill">+$199</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Summary Column -->
+          <div>
+            <div class="order-summary-box">
+              <div class="eyebrow" style="margin-bottom: 8px;">Order Summary</div>
+              <div class="price-display-giant" id="summaryTotal">$1,199</div>
+              <div class="price-sub" id="summaryMonthly">$50/mo for 24 mo. with 0% APR</div>
+
+              <div class="summary-line">
+                <span>Model:</span>
+                <span id="summaryModel">iPhone 18 Pro (6.3")</span>
+              </div>
+              <div class="summary-line">
+                <span>Finish:</span>
+                <span id="summaryFinish">Natural Titanium</span>
+              </div>
+              <div class="summary-line">
+                <span>Capacity:</span>
+                <span id="summaryStorage">256GB</span>
+              </div>
+              <div class="summary-line">
+                <span>Shipping:</span>
+                <span>Free Expedited Delivery</span>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <button class="btn-primary" style="width: 100%; padding: 14px 24px; font-size: 15px;" onclick="openReservationModal()">
+                Reserve Your iPhone 18 Pro
+              </button>
+              <div style="font-size: 11px; text-align: center; color: var(--text-subtle); margin-top: 12px;">
+                No payment charged today. Free cancellation anytime prior to release.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       Reservation Receipt Modal Popup
+       ======================================================================== -->
+  <div id="reserveModal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeReservationModal()">✕</button>
+      <div class="receipt-token-badge" id="receiptToken">APL-18P-849102-QNT</div>
+      <h3 class="title-large" style="font-size: 26px; margin-bottom: 12px;">Concept Reservation Confirmed</h3>
+      <p class="body-large" style="margin-bottom: 24px;">
+        You have secured Priority Allocation slot #1,842 for the iPhone 18 Pro release.
+      </p>
+
+      <div class="spec-matrix-card" style="margin-bottom: 24px; text-align: left;">
+        <div class="spec-row">
+          <span class="spec-param">Configuration</span>
+          <span class="spec-detail" id="modalOrderSummary">iPhone 18 Pro (6.3") • 256GB • Natural Titanium</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-param">Delivery Window</span>
+          <span class="spec-detail">Late Fall 2026 Keynote Launch</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-param">Status</span>
+          <span class="spec-detail" style="color: var(--accent-cyan);">CONFIRMED & ENCRYPTED</span>
+        </div>
+      </div>
+
+      <button class="btn-primary" style="width: 100%;" onclick="closeReservationModal()">
+        Done & Return to Experience
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Site Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-badge" style="margin-bottom: 16px;">
+            <span class="brand-title" style="font-size: 18px;">iPhone 18 Pro</span>
+          </div>
+          <p class="footer-brand-desc">
+            An advanced futuristic industrial concept website exploring next-generation zero-gravity materials, quantum optics, and interactive WebGL experiences.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="#overview" class="footer-link">Overview</a></li>
+            <li><a href="#titanium" class="footer-link">Grade 5 Titanium</a></li>
+            <li><a href="#camera" class="footer-link">Quantum Camera</a></li>
+            <li><a href="#display" class="footer-link">ProMotion XDR 2.0</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">3D Experience</div>
+          <ul class="footer-links-list">
+            <li><a href="#architecture" class="footer-link">3D Exploded Layers</a></li>
+            <li><a href="#studio" class="footer-link">Interactive 3D Studio</a></li>
+            <li><a href="#specs" class="footer-link">Full Tech Matrix</a></li>
+            <li><a href="#reserve" class="footer-link">Pre-Order Configurator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Legal & Concept</div>
+          <ul class="footer-links-list">
+            <li><a href="#" class="footer-link">Concept Disclaimer</a></li>
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Apple Concept Labs</a></li>
+            <li><a href="#" class="footer-link">Zero-G Framework</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Apple Concept Labs. All trademarks, logos, and brand names are property of their respective owners.
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <span style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 11px;">THREE.JS r128 • WEBGL 2.0 • 60 FPS</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor Core 3D Scripts -->
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/OrbitControls.js"></script>
+  <script src="vendor/gsap.min.js"></script>
+
+  <!-- Master Interactive Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
